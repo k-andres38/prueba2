@@ -74,6 +74,37 @@ exports.updateUser=async (req,res,next)=>{
 
 
 
+exports.infoUser=async (req,res,next)=>{
+   
+   
+    try {
+
+        req.params.id ?  await  modeloUsuario.findByPk(req.params.id).then((data)=>{
+            res.json({datos:data},200)
+        }).catch((err) => next(err)) : await  modeloUsuario.findAll().then((data)=>{
+            res.json({datos:data},200)
+        }).catch((err) => next(err))
+      
+        
+        
+        
+    
+   
+     
+    } catch (error) {
+        res.send(error)
+        //  const errorMessage=error.name=='SequelizeUniqueConstraintError'? 'El valor que intenta ingresar ya existe en la base de datos'
+        //  : res.json({error:message},500);
+          
+      
+        
+        
+    }
+}
+
+
+
+
 
 
 
