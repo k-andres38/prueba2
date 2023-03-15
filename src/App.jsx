@@ -4,7 +4,7 @@ import Hola from './componetes/hola';
 function App() {
   return (
     <div className="App">
-      <h2>hola</h2>
+      <h2>Formulario Prueba</h2>
       <Hola />
     </div>
     
