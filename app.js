@@ -14,7 +14,11 @@ app.use(express.json())
 const router=require('./server/routes/userRoute');
 
 
+
 app.use('/',router);
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname + '/src/index.jsx')
+})
 
 
 const errorHandler = require('./server/handler/handler');
