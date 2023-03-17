@@ -12,15 +12,15 @@ exports.createUser=async (req,res,next)=>{
     try {
         
         
-        const {usuAli, usuNom, usuApe, usuEma, usuPas}=req.body;
+    //   const {usuAli, usuNom, usuApe, usuEma, usuPas1,usuPas2}=req.body;
+    //   console.log(req.body)
         
-       await modeloUsuario.create({
-            usuAli, usuNom, usuApe, usuEma, usuPas
-        }).then((data)=>{
-            res.json({datos: data},201)
+       await modeloUsuario.create(req.body).then((data)=>{
+            
+            res.status(201).json({datos: data})
         }).catch((err) => next(err));
        
-       // res.send('hola');
+     
    
      
     } catch (error) {

@@ -1,12 +1,21 @@
 
+import React from 'react';
+
 import './App.css';
-import Hola from './componetes/hola'; 
+
+import Login from './componetes/Login';
+import LogoutButton from './componetes/LogoutButton';
+import Profile from './componetes/Profile';
+
 function App() {
   return (
     <div className="App">
-      <h2>Formulario Prueba</h2>
-      <Hola />
+     <Login />
+     <Profile />
+     <LogoutButton />
     </div>
+
+
     
   );
 }

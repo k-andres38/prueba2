@@ -26,12 +26,17 @@ module.exports = {
         type: Sequelize.STRING(20),
         allowNull:false
       },
+      
       usuEma: {
         type: Sequelize.STRING(50),
         unique: true,
         allowNull:false
       },
-      usuPas: {
+      usuPas1: {
+        type: Sequelize.STRING(25),
+        allowNull:false,
+      },
+      usuPas2: {
         type: Sequelize.STRING(25),
         allowNull:false,
       },
@@ -69,9 +74,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }, 
-               
-        
-      
     });
   },
 

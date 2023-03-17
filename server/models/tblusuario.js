@@ -84,9 +84,11 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     usuAli: DataTypes.STRING,
+    usuNom:DataTypes.STRING,
     usuApe: DataTypes.STRING,
     usuEma: DataTypes.STRING,
-    usuPas: DataTypes.STRING,
+    usuPas1: DataTypes.STRING,
+    usuPas2: DataTypes.STRING,
     usuTel: DataTypes.STRING,
     usuEst: DataTypes.TINYINT,
     usuDir: DataTypes.STRING,
